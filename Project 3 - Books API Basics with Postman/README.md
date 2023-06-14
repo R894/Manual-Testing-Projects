@@ -1,4 +1,77 @@
 # Books API practice project
-Under construction, please come back later
+This project showcases my expertise in API testing using Postman, with a specific focus on the "Books" API available at https://simple-books-api.glitch.me/. 
+Through the implementation of API chaining, I have effectively tested and validated the interconnected functionality of multiple API endpoints.
 
-Quick summary: Postman API collection that can run on data driven tests
+## Endpoints
+
+### Status
+GET `/status`
+
+Returns the status of the API.
+
+### List of books
+GET `/books`
+
+Returns a list of books.
+
+Optional query parameters:
+
+* type: fiction or non-fiction
+* limit: a number between 1 and 20.
+
+### Get a single book
+GET `/books/:bookId`
+
+Retrieve detailed information about a book.
+
+### Submit an order
+
+The request body needs to be in JSON format and include the following properties:
+
+`bookId` - Integer - Required
+`customerName` - String - Required
+
+The response body will contain the order Id.
+
+### Get all orders
+
+GET `/orders`
+
+Allows you to view all orders. Requires authentication.
+
+### Get an order
+
+GET `/orders/:orderId`
+
+Allows you to view an existing order. Requires authentication.
+
+### Update an order
+
+PATCH `/orders/:orderId`
+
+Update an existing order. Requires authentication.
+
+The request body needs to be in JSON format and allows you to update the following properties:
+
+ - `customerName` - String
+ 
+### Delete an order
+
+DELETE `/orders/:orderId`
+
+Delete an existing order. Requires authentication.
+
+The request body needs to be empty.
+
+## API Authentication
+
+To submit or view an order, you need to register your API client.
+
+POST `/api-clients/`
+
+The request body needs to be in JSON format and include the following properties:
+
+ - `clientName` - String
+ - `clientEmail` - String
+
+The response body will contain the access token. The access token is valid for 7 days.
