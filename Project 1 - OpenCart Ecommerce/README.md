@@ -2,6 +2,10 @@
 OpenCart is an open-source, free e-commerce platform that allows business owners to effortlessly launch their storefronts.
 As part of the project, I've tested some of the functionalities of OpenCart web application, due to the time restrictions only the most critical business flows were tested
 
+## Quick Start
+This section contains the STP, STD, and STR documents and the bug reports in jira
+To see the bug reports click on the Reports folder, each bug report folder will contain a screenshot of the bug, a video and a screenshot of the jira bug report.
+
 ## Scope
 Inclusions:
 
